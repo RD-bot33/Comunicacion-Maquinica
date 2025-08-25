@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="logo.png"> 
+  <title>Comunicación Maquínica </title>
+  <meta name="description" content="Prototipo tech-fresh para explorar la comunicación maquínica: home, blog, contacto y manifiesto del proyecto."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+      <div class="logo" aria-hidden="true">
+  <img src="logo.png" alt="Logo Comunicación Maquínica" />
+</div>
+<h1>Proyecto educativo experimental</h1>
+
+      </div>
+      <nav class="links" aria-label="Primaria">
+        <a href="#home" class="nav-link js-scroll-trigger">Home</a>
+        <a href="#proyecto" class="nav-link js-scroll-trigger">Proyecto</a>
+        <a href="#blog" class="nav-link js-scroll-trigger">Blog</a>
+        <a href="#contacto" class="nav-link cta js-scroll-trigger">Contacto</a>
+      </nav>
+      <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <span class="pill">● Educación · experimental · disruptiva</span>
+      <h2 class="title">
+        <span class="glitch" data-text="Comunicación Maquínica">Comunicación Maquínica</span>
+      </h2>
+      <p class="subtitle">Exploramos el tránsito simbólico entre humanos y máquinas: cómo el lenguaje humano se traduce a números, es procesado, muta y regresa convertido en nuevas formas de sentido. Una práctica entre la comunicación, tecnología y el arte.</p>
+      
+    </div>
+  </section>
+
+  <!-- PROYECTO -->
+  <section id="proyecto">
+    <div class="container">
+      <h2>Proyecto</h2>
+      <p class="lead">La comunicación maquínica es un campo emergente que analiza la interacción simbólica entre humanos y sistemas computacionales. Este proyecto estudia los ciclos de traducción donde el lenguaje humano se convierte en datos, es procesado por la máquina y regresa transformado en nuevos significados.
+      </p>
+      <p>
+        La motivación nace de una trayectoria personal. Con formación en comunicación audiovisual y una conexión temprana con los sistemas computacionales, se identificó un vacío en la educación formal sobre la interacción avanzada con la tecnología. Esta experiencia, profundizada con prácticas reflexivas, reveló una simbiosis humano-máquina latente.
+      </p>
+      <p>
+        Aquí, la computadora no es solo una herramienta, sino un <strong>mediador semiótico</strong>. Al procesar información, introduce transformaciones, sesgos y variaciones, dando lugar a lenguajes emergentes que superan la simple ejecución de instrucciones.
+      </p>
+      <p>El objetivo es documentar, conceptualizar y establecer un marco preliminar para esta disciplina. Aunque aún no tiene reconocimiento formal, su impacto es tangible en nuestra interacción cotidiana con la tecnología.</p>
+
+      <div class="panel-grid" style="margin-top: 24px;">
+        <div class="panel-item">
+          <h3>Hipótesis</h3>
+          <p>La computadora actúa como un mediador semiótico que, al traducir y re-ensamblar lenguaje, genera significado nuevo.</p>
+        </div>
+        <div class="panel-item">
+          <h3>Prácticas</h3>
+          <p>Diseño de prompts, interfaces conversacionales, terminales vivas, protocolos poéticos y experimentos con error y glitch.</p>
+        </div>
+        <div class="panel-item">
+          <h3>Aplicaciones</h3>
+          <p>Arte, tecnología, Interacción Humano-Computadora (HCI), Filosofía y Escritura Como Forma de Programar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="grid" id="blog-grid" style="margin-top:16px">
+        <!-- Blog posts will be injected here by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p class="lead">¿Colab? ¿Taller? ¿Conversatorio? Escríbeme.</p>
+      <div class="panel" style="margin-top:16px">
+        <form action="https://formspree.io/f/mkgvnnve" method="POST">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+            <input type="email" id="email" name="email" placeholder="Email" required />
+          </div>
+          <input type="text" id="asunto" name="asunto" placeholder="Asunto" />
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+          <p id="status" style="margin:6px 0 0; color:var(--muted)"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Comunicación Maquínica · by RD — prototipo v0.1</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

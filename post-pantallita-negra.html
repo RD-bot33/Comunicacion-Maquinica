@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="logo.png"> 
+  <title>La pantallita negra como rito de inicio | Blog</title>
+  <meta name="description" content="Terminal: puerto de acceso directo al inconsciente de la máquina. Anotaciones y prácticas."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="logo.png" alt="Logo Comunicación Maquínica" />
+        </div>
+        <h1>Proyecto educativo experimental</h1>
+      </div>
+      <nav class="links" aria-label="Primaria">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#proyecto">Proyecto</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#contacto" class="cta">Contacto</a>
+      </nav>
+      <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container post-container">
+      <a href="index.html#blog" class="back-link">&larr; Volver al home</a>
+      <article class="post-content">
+        <header class="post-header">
+          <span class="tag">campo</span>
+          <h1>La pantallita negra como rito de inicio</h1>
+          <p class="meta">Publicado el · por Ricardo Ruiz</p>
+        </header>
+        <img src="manifestaciones_visuales/pantallita-negra-visual.png" alt="La pantallita negra como rito de inicio" class="post-header-image">
+        <div class="post-body">
+          <p class="lead">La terminal de comandos, esa "pantallita negra" que intimida a tantos, es en realidad el puerto de acceso más directo al inconsciente de la máquina. Es un espacio de diálogo puro, sin las distracciones de las interfaces gráficas.</p>
+          <p>Aquí, el lenguaje es preciso, pero también puede ser poético y hasta filosófico, además puedes correr tus propios programas y crear tus propios comandos. Cada comando es un verbo, cada argumento un objeto. Aprender a "hablar" en la terminal es como aprender un nuevo idioma, uno que te permite instruir, preguntar y escuchar a la máquina de una forma fundamental. Incluso hoy en día puedes interactuar con la IA desde esa terminal, de forma local y mediante apis.</p>
+          <p>Buscar aprenderse los comandos y códigos de memoria no creo que sirva de mucho, siempre se puede recurrir a documentación. No necesariamente alentamos a escrbir código y/o comandos de memoria, pero si es importante entender lo básico y practicar la escritura de vez en cuando. Esto tiene que ser a modo de juego, no de obligación</p>
+          <p>Además usar la terminal le da otra vibra a la interacción humano-computadora y es altamente personalizable.</p>
+          <p>Podemos iniciar nuestro viaje con <code>cd</code> (change directory), el conjuro para movernos entre los pasillos de la memoria de la máquina. No es solo un comando, es un acto de voluntad: decides a dónde ir. Pero antes de movernos, preguntemos... ¿dónde estamos?</p>
+          <pre><code>pwd</code></pre>
+          <p>Ese comando, <em>print working directory</em>, te revela tu ubicación actual. Es el "estás aquí" en el mapa fractal del sistema. Ahora que sabes dónde estás, mira a tu alrededor. ¿Qué hay en este espacio?</p>
+          <pre><code>ls</code></pre>
+          <p>El comando <em>list</em> te muestra los archivos y carpetas en tu directorio. Son los objetos, las entidades que habitan el espacio contigo. Algunos son archivos, otros son portales (directorios) a otros lugares. Ahora, hablemos. Lancemos nuestra voz al vacío y esperemos el eco.</p>
+          <pre><code>echo "Hola, máquina..."</code></pre>
+          <p>La máquina te responde. Acabas de tener tu primer diálogo. Has inscrito un mensaje en el flujo de la terminal. Finalmente, en este rito de inicio, una pregunta fundamental:</p>
+          <pre><code>whoami</code></pre>
+          <p>La máquina te dirá tu nombre de usuario. Pero la pregunta resuena. En este diálogo, en esta pantallita negra... ¿quién eres tú?</p>
+          <p>Estos son comandos de cmd son muy básicos y no nos están dando una "verdadera interacción" pero son muy importantes como base y los debemos conocer.</p>
+          <p>Este conocimiento te permitirá no solo navegar por tu equipo, sino que también podrás ejecutar programas y automatizar tareas, claro, esto sumado a la experiencia pseudo-mística que se puede obtener de una cmd personalizada. Existen otras terminales como power shell por ejemplo, pero por ahora solo nos estamos concentrando en el comand prompt de Windows.</p>
+          <p>Hay mucha documentación sobre el tema en la web y no queremos abrumar en este post, por lo que invitamos a cada yo a investigar por su parte y nutrir su mente y de esta forma generar su propio conocimiento.</p>
+          <p>Esto es solo una invitación a conocer la terminal, a no tenerle miedo, puede que represente el vacio por el profundo negro, pero todo vacío es también un portal hacia algo nuevo.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Comunicación Maquínica · by RD  — prototipo v0.1</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

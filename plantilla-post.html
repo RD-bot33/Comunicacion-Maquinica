@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="logo.png"> 
+  <!-- Cambia el título y la descripción para cada post -->
+  <title>Título del Post | Comunicación Maquínica</title>
+  <meta name="description" content="Descripción breve del post."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- El header es el mismo, pero los links apuntan a la página principal -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="logo.png" alt="Logo Comunicación Maquínica" />
+        </div>
+        <h1>Proyecto educativo experimental</h1>
+      </div>
+      <nav class="links" aria-label="Primaria">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#proyecto">Proyecto</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#contacto" class="cta">Contacto</a>
+      </nav>
+      <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobile" class="mobile">
+      <a href="index.html#home" onclick="toggleMenu()">Home</a>
+      <a href="index.html#proyecto" onclick="toggleMenu()">Proyecto</a>
+      <a href="index.html#blog" onclick="toggleMenu()">Blog</a>
+      <a href="index.html#contacto" onclick="toggleMenu()">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container post-container">
+      <a href="index.html#blog" class="back-link">&larr; Volver al home</a>
+      <article class="post-content">
+        <header class="post-header">
+          <!-- Rellena esta información -->
+          <span class="tag">etiqueta</span>
+          <h1>Título del Post</h1>
+          <p class="meta">Publicado el · por Ricardo Ruiz</p>
+        </header>
+        <div class="post-body">
+          <!-- Aquí va el contenido de tu artículo -->
+          <p class="lead">Este es el párrafo introductorio (lead). Úsalo para enganchar al lector con la idea principal del artículo.</p>
+          <p>Este es el cuerpo de tu artículo. Puedes empezar a escribir aquí. Usa párrafos para estructurar tus ideas. Puedes añadir <strong>texto en negrita</strong>, <em>cursiva</em>, e incluso <code>código</code> si lo necesitas.</p>
+          
+          <h2>Un subtítulo para organizar</h2>
+          <p>Desarrolla tus puntos clave en secciones claras para facilitar la lectura.</p>
+          <ul>
+            <li>Las listas son geniales para enumerar puntos.</li>
+            <li>Ayudan a que la información sea fácil de digerir.</li>
+          </ul>
+          
+          <blockquote>
+            "Usa citas en bloque para resaltar frases o ideas importantes de otros autores o de tus propias reflexiones."
+          </blockquote>
+          
+          <p>Recuerda guardar los cambios y refrescar el navegador para ver los resultados.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Comunicación Maquínica · by RD — prototipo v0.1</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
