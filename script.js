@@ -34,7 +34,7 @@ function renderBlogPosts() {
   const postHtml = posts.map(post => `
     <a href="${post.href}" class="card-link">
       <article class="card">
-        <img src="${post.image}" alt="${post.title}" class="thumb-image">
+        <img src="${post.image}" alt="${post.title}" class="thumb-image" loading="lazy">
         <div class="content">
           <span class="tag">${post.tag}</span>
           <h3 style="margin:6px 0 8px">${post.title}</h3>
