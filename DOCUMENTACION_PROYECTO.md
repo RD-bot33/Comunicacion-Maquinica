@@ -45,6 +45,7 @@ El sitio, aunque estático, usa JavaScript para funcionalidades dinámicas.
     ```javascript
     {
       href: "url-del-post.html",
+      image: "ruta/a/la/imagen.png",
       thumb_aria_label: "Descripción de la imagen",
       tag: "etiqueta",
       title: "Título del Post",
@@ -52,10 +53,12 @@ El sitio, aunque estático, usa JavaScript para funcionalidades dinámicas.
     }
     ```
 -   **Renderizado:** La función `renderBlogPosts()` se encarga de leer el array y generar el HTML.
--   **Scripts Defensivos:** Las funciones deben, en la medida de lo posible, comprobar si un elemento existe antes de intentar manipularlo. Ejemplo de la función `toggleMenu()`:
+-   **Manejo de Formulario:** La función `setupForm()` gestiona el envío del formulario de contacto. Intercepta el evento `submit`, muestra un ícono de carga mientras se procesa la solicitud a Formspree y luego muestra un mensaje de estado (éxito o error).
+-   **Diseño Responsivo:** El menú de navegación ya no depende de JavaScript para funcionar en móviles. Se ha implementado un diseño puramente responsivo con CSS que adapta la disposición del header y otros elementos en pantallas pequeñas.
+-   **Scripts Defensivos:** Las funciones deben, en la medida de lo posible, comprobar si un elemento existe antes de intentar manipularlo. Ejemplo de la función `setupForm()`:
     ```javascript
-    const m = document.getElementById('mobile');
-    if (m) { // Esta comprobación evita errores en páginas sin el menú
+    const form = document.getElementById('contact-form');
+    if (form) { // Esta comprobación evita errores en páginas sin el formulario
       // ...código...
     }
     ```

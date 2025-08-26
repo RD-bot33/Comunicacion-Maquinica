@@ -105,6 +105,50 @@ function setupCodeCopy() {
   });
 }
 
+// Form Submission Handler
+function setupForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const status = document.getElementById('status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    form.classList.add('loading');
+    status.style.display = 'none';
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.innerHTML = "¡Gracias por tu mensaje!";
+        status.style.color = 'var(--accent2)';
+        form.reset();
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+        }
+        status.style.color = 'var(--danger)';
+      }
+    } catch (error) {
+      status.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+      status.style.color = 'var(--danger)';
+    } finally {
+      form.classList.remove('loading');
+      status.style.display = 'block';
+    }
+  });
+}
+
 // Initial Render & Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
   // Render blog posts
@@ -125,4 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Set up code copy buttons
   setupCodeCopy();
+
+  // Set up form handler
+  setupForm();
 });

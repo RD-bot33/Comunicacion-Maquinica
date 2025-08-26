@@ -27,7 +27,6 @@
         <a href="#blog" class="nav-link js-scroll-trigger">Blog</a>
         <a href="#contacto" class="nav-link cta js-scroll-trigger">Contacto</a>
       </nav>
-      <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
@@ -91,14 +90,17 @@
       <h2>Contacto</h2>
       <p class="lead">¿Colab? ¿Taller? ¿Conversatorio? Escríbeme.</p>
       <div class="panel" style="margin-top:16px">
-        <form action="https://formspree.io/f/mkgvnnve" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/mkgvnnve" method="POST">
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
             <input type="email" id="email" name="email" placeholder="Email" required />
           </div>
           <input type="text" id="asunto" name="asunto" placeholder="Asunto" />
           <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-          <button type="submit">Enviar</button>
+          <div class="submit-container">
+            <button type="submit">Enviar</button>
+            <div class="loader"></div>
+          </div>
           <p id="status" style="margin:6px 0 0; color:var(--muted)"></p>
         </form>
       </div>
